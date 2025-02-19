@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/estilo/style.css">
+    <title>Lista de tarefas</title>
+</head>
+<body>
+    <header class="main">
+        <h1>
+            Minha lista de tarefas
+        </h1>
+    </header>
+    <main>
+        <div class="add_tarefa">
+            <input type="text" name="tarefa" id="id_tarefa" placeholder="Defina uma tarefa" required>
+            <input type="text" name="descrição" id="id_descrição"placeholder="Descreva a sua tarefa">
+            <button>Adicionar tarefa</button>
+        </div>
+        <hr>
+        <section class="tarefas">
+            <table>
+                <thead>
+                    <th>Tarefa</th>
+                    <th>Prioridade</th>
+                    <th></th>
+                    <th></th>
+                </thead>
+                <tbody id="mostrar_tarefa">
+                    <!--As tarefas serão adicionadas via JS-->
+
+                    <tr><!--Cada nova tarefa será um tr (nova linha na tabela)-->
+
+                        <!--Cada linha terá 4 td (colunas) definidas abaixo -->
+
+                        <!--
+                        1 <td>Teste</td> referente ao nome da tarefa
+                        2 <td>Média</td> referente a prioridade da tarefa
+
+                        3 <td>Editar</td> icone*
+                        4 <td>Deletar</td> icone*
+                        -->
+
+                        <td>Teste de carro</td> 
+                        <td>Média</td> 
+                        <td><img src="icon/editar.svg" alt="eddite"></td> 
+                        <td><img src="icon/delete.svg" alt="delete"></td>
+                    </tr>
+                    <tr>
+                        <td>fazer compras no shoping</td> 
+                        <td>Baixa</td> 
+                        <td><img src="icon/editar.svg" alt="eddite"></td> 
+                        <td><img src="icon/delete.svg" alt="delete"></td>
+                    </tr>
+                    <tr>
+                        <td>Teste</td> 
+                        <td>Alta</td> 
+                        <td><img src="icon/editar.svg" alt="eddite"></td> 
+                        <td><img src="icon/delete.svg" alt="delete"></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>

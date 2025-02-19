@@ -1,0 +1,70 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333333;
+}
+body{
+    background-color: #f4f4f4;
+}
+body header, main{
+    max-width: 800px;
+    margin: 0 auto;
+}
+body header{
+    text-align: center;
+    margin: 20px auto;
+}
+main{
+    border-radius: 7px;
+    box-shadow: 0px 0px 10px  #3333332d;
+    padding: 20px;
+}
+main div.add_tarefa{
+    padding: 5px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+div.add_tarefa input{
+    flex-grow: 1;
+}
+.add_tarefa input,
+.add_tarefa button{
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+}
+.add_tarefa button{
+    background-color: #6c63ff;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px  #33333362;
+}
+.add_tarefa button:hover{
+    transition: 0.7s;
+    background-color: #524bd9;
+}
+.add_tarefa button:active{
+    background-color: #6c63ff;
+    padding: 7px 8px;
+    transition: 0s;
+}
+main .tarefas{
+    padding: 30px 5px;
+    text-align: center;
+}
+thead th:nth-of-type(3),
+thead th:nth-of-type(4)
+{
+    width: 30px;
+}
+table thead th:first-child,
+table tbody tr td:first-child{
+    text-align: left;
+}
