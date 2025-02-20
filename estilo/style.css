@@ -21,20 +21,36 @@ main{
     box-shadow: 0px 0px 10px  #3333332d;
     padding: 20px;
 }
-main div.add_tarefa{
+main .add_tarefa{
     padding: 5px;
     margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.add_tarefa div{
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
 }
-div.add_tarefa input{
+.add_tarefa div:last-child{
+    flex-direction: column;
+    gap: 20px;
+}
+.add_tarefa div:last-child input,
+button{
+    width: 100%;
+}
+.add_tarefa input,
+.add_tarefa select{
     flex-grow: 1;
 }
 .add_tarefa input,
-.add_tarefa button{
+.add_tarefa button,
+.add_tarefa select{
     padding: 8px;
     border-radius: 5px;
     border: none;
@@ -45,6 +61,7 @@ div.add_tarefa input{
     font-weight: bold;
     cursor: pointer;
     box-shadow: 0px 0px 10px  #33333362;
+    flex-grow: 1;
 }
 .add_tarefa button:hover{
     transition: 0.7s;

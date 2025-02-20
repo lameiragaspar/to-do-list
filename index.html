@@ -14,11 +14,21 @@
         </h1>
     </header>
     <main>
-        <div class="add_tarefa">
-            <input type="text" name="tarefa" id="id_tarefa" placeholder="Defina uma tarefa" required>
-            <input type="text" name="descrição" id="id_descrição"placeholder="Descreva a sua tarefa">
-            <button>Adicionar tarefa</button>
-        </div>
+        <form action="" class="add_tarefa">
+            <div class="">
+                <input type="text" name="tarefa" id="id_tarefa" placeholder="Defina uma tarefa" required>
+                <select name="prioridade" id="id_prioridade" required>
+                    <option value="">Defina uma prioridade</option>
+                    <option value="Alta">Alta</option>
+                    <option value="Média">Média</option>
+                    <option value="Baixa">Baixa</option>
+                </select>
+            </div>
+            <div class="">
+                <input type="text" name="descrição" id="id_descrição"placeholder="Descreva a sua tarefa" required autocomplete="off">
+                <button type="submit">Adicionar tarefa</button>
+            </div>
+        </form>
         <hr>
         <section class="tarefas">
             <table>
