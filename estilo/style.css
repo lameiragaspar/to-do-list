@@ -53,7 +53,6 @@ button{
 .add_tarefa select{
     padding: 8px;
     border-radius: 5px;
-    border: none;
 }
 .add_tarefa button{
     background-color: #6c63ff;
@@ -74,14 +73,19 @@ button{
 }
 main .tarefas{
     padding: 30px 5px;
+    text-align: left;
+}
+thead th{
+    min-width: 25px;
+}
+table thead th:nth-child(3),
+table tbody td:nth-child(3){
     text-align: center;
 }
-thead th:nth-of-type(3),
-thead th:nth-of-type(4)
-{
-    width: 30px;
-}
-table thead th:first-child,
-table tbody tr td:first-child{
-    text-align: left;
+tbody td img{
+    width: 19px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

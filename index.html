@@ -25,18 +25,22 @@
                 </select>
             </div>
             <div class="">
-                <input type="text" name="descrição" id="id_descrição"placeholder="Descreva a sua tarefa" required autocomplete="off">
-                <button type="submit">Adicionar tarefa</button>
+                <input type="text" name="descricao" id="id_descricao"placeholder="Descreva a sua tarefa" required autocomplete="off">
+                <button type="button" onclick="add_tarefa()">Adicionar tarefa</button>
             </div>
         </form>
         <hr>
         <section class="tarefas">
             <table>
                 <thead>
-                    <th>Tarefa</th>
-                    <th>Prioridade</th>
-                    <th></th>
-                    <th></th>
+                    <tr>
+                        <th></th>
+                        <th>Tarefa</th>
+                        <th>Prioridade</th>
+                        <th>Data</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
                 </thead>
                 <tbody id="mostrar_tarefa">
                     <!--As tarefas serão adicionadas via JS-->
@@ -52,29 +56,14 @@
                         3 <td>Editar</td> icone*
                         4 <td>Deletar</td> icone*
                         -->
-
-                        <td>Teste de carro</td> 
-                        <td>Média</td> 
-                        <td><img src="icon/editar.svg" alt="eddite"></td> 
-                        <td><img src="icon/delete.svg" alt="delete"></td>
-                    </tr>
-                    <tr>
-                        <td>fazer compras no shoping</td> 
-                        <td>Baixa</td> 
-                        <td><img src="icon/editar.svg" alt="eddite"></td> 
-                        <td><img src="icon/delete.svg" alt="delete"></td>
-                    </tr>
-                    <tr>
-                        <td>Teste</td> 
-                        <td>Alta</td> 
-                        <td><img src="icon/editar.svg" alt="eddite"></td> 
-                        <td><img src="icon/delete.svg" alt="delete"></td>
-                    </tr>
                     
+                    </tr>
                 </tbody>
             </table>
         </section>
     </main>
     <footer></footer>
+    <script src="js/script.js"></script>
 </body>
+
 </html>
