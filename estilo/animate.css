@@ -1,0 +1,24 @@
+.add_tarefa div.input_label {
+    position: relative;
+}
+.input_label input,
+.add_tarefa select{
+    border: 1.5px solid #6c63ff;
+}
+.input_label label{
+    position: absolute;
+    top: 10;
+    left: 10px;
+    font-size: 14px;
+    pointer-events: none;
+    transition: .3s ease all;
+    background-color: #f4f4f4;
+    padding: 0 5px;
+}
+.input_label input:focus + label,
+.input_label input:valid + label{
+    color: #6c63ff;
+    top: -9px;
+    font-size: 13.1px;
+    transition: .4s ease all;
+}

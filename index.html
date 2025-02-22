@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/estilo/style.css">
+    <link rel="stylesheet" href="/estilo/animate.css">
     <title>Lista de tarefas</title>
 </head>
 <body>
@@ -15,8 +16,9 @@
     </header>
     <main>
         <form action="" class="add_tarefa">
-            <div class="">
-                <input type="text" name="tarefa" id="id_tarefa" placeholder="Defina uma tarefa" required>
+            <div class="input_label">
+                <input type="text" name="tarefa" id="id_tarefa" required>
+                <label for="id_tarefa">Defina uma tarefa</label>
                 <select name="prioridade" id="id_prioridade" required>
                     <option value="">Defina uma prioridade</option>
                     <option value="Alta">Alta</option>
@@ -25,7 +27,10 @@
                 </select>
             </div>
             <div class="">
-                <input type="text" name="descricao" id="id_descricao"placeholder="Descreva a sua tarefa" required autocomplete="off">
+                <div class="input_label">
+                    <input type="text" name="descricao" id="id_descricao" required autocomplete="off">
+                    <label for="id_descricao">Descrição</label>
+                </div>
                 <button type="button" onclick="add_tarefa()">Adicionar tarefa</button>
             </div>
         </form>
