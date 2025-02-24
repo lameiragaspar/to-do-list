@@ -1,7 +1,10 @@
+import caixa_dialogo from "./animate.js";
+
 const num_td = 6;
 
-function add_tarefa(){
+function add_tarefa(event){
     event.preventDefault(); // Evita o recarregamento da página
+    
     //cAMPOS DE IMPUT
     let tarefa = document.getElementById("id_tarefa").value;
     let prioridade = document.getElementById("id_prioridade").value;
@@ -9,9 +12,10 @@ function add_tarefa(){
 
     //VALIDANDO OS CAMPOS
     if(tarefa.trim() === "" || prioridade.trim() === "" || descricao.trim()===""){
-        
+        let parametro = "Vasio"
+        caixa_dialogo(parametro)
+        return; // Sai da função se algum campo estiver vazio
     }
-
     //DATA ACTUAL - CRIAÇÃO DA TAREFA
     const data = new Date()
     let hoje = (`${data.getDate()}/${data.getMonth() + 1}/${data.getFullYear()}`)
@@ -42,6 +46,13 @@ function add_tarefa(){
                 break
             case 2:
                 nova_td.textContent = prioridade
+                if(prioridade == "Alta"){
+                    nova_td.style.backgroundColor ="#ff5252";
+                }else if(prioridade =="Média"){
+                     nova_td.style.backgroundColor ="#ffa726";
+                }else if(prioridade =="Baixa"){
+                    nova_td.style.backgroundColor ="#4caf50";
+               }
                 break
             case 3:
                 nova_td.textContent = hoje
@@ -67,3 +78,6 @@ function add_tarefa(){
     prioridade = document.getElementById("id_prioridade").value = "";
     descricao = document.getElementById("id_descricao").value = "";
 }
+//Se sertificando de que a função add_tarefa é chamada. Se não no HTML, então diretamente no JS
+const adiciona_tarefa = document.getElementById("add_tarefa");
+adiciona_tarefa.addEventListener("click", add_tarefa);

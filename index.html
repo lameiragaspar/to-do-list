@@ -9,6 +9,10 @@
     <title>Lista de tarefas</title>
 </head>
 <body>
+    <!--Caixa de dialogo-->
+    <section class="caixaDdialogo">
+        <!--Todos os elementos adicionados via animate.js-->
+    </section>
     <header class="main">
         <h1>
             Minha lista de tarefas
@@ -31,7 +35,7 @@
                     <input type="text" name="descricao" id="id_descricao" required autocomplete="off">
                     <label for="id_descricao">Descrição</label>
                 </div>
-                <button type="button" onclick="add_tarefa()">Adicionar tarefa</button>
+                <button id="add_tarefa" type="button" onclick="add_tarefa(event)">Adicionar tarefa</button>
             </div>
         </form>
         <hr>
@@ -68,7 +72,8 @@
         </section>
     </main>
     <footer></footer>
-    <script src="js/script.js"></script>
+    <script type="module" src="js/script.js"></script>
+    <script type="module" src="js/animate.js"></script>
 </body>
 
 </html>
