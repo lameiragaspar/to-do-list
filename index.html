@@ -9,17 +9,13 @@
     <title>Lista de tarefas</title>
 </head>
 <body>
-    <!--Caixa de dialogo-->
-    <section class="caixaDdialogo">
-        <!--Todos os elementos adicionados via animate.js-->
-    </section>
     <header class="main">
         <h1>
             Minha lista de tarefas
         </h1>
     </header>
     <main>
-        <form action="" class="add_tarefa">
+        <form action="" class="add_tarefa focus">
             <div class="input_label">
                 <input type="text" name="tarefa" id="id_tarefa" required>
                 <label for="id_tarefa">Defina uma tarefa</label>
@@ -39,7 +35,7 @@
             </div>
         </form>
         <hr>
-        <section class="tarefas">
+        <section class="tarefas focus">
             <table>
                 <thead>
                     <tr>
@@ -56,12 +52,12 @@
 
                     <tr><!--Cada nova tarefa será um tr (nova linha na tabela)-->
 
-                        <!--Cada linha terá 4 td (colunas) definidas abaixo -->
+                        <!--Cada linha terá 5 td (colunas) definidas abaixo -->
 
                         <!--
                         1 <td>Teste</td> referente ao nome da tarefa
                         2 <td>Média</td> referente a prioridade da tarefa
-
+                            data
                         3 <td>Editar</td> icone*
                         4 <td>Deletar</td> icone*
                         -->
@@ -69,6 +65,18 @@
                     </tr>
                 </tbody>
             </table>
+        </section>
+        <!--Caixa de dialogo-->
+        <section id="caixaDdialogo" class="hidden">
+            <div id="conteudo">
+                <div>
+                    <div id="txt">
+                        <!--Todos os elementos adicionados via animate.js-->
+                    </div>
+                    <button id="fechar_caixa" type="button">Ok</button>
+                </div>
+
+            </div>
         </section>
     </main>
     <footer></footer>

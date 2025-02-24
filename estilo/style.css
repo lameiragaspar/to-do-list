@@ -9,6 +9,7 @@ body{
     background-color: #f4f4f4;
 }
 body header, main{
+    position: relative;
     max-width: 800px;
     margin: 0 auto;
 }
@@ -45,7 +46,7 @@ button{
     width: 100%;
 }
 .add_tarefa input,
-.add_tarefa button,
+button,
 .add_tarefa select{
     flex-grow: 1;
     outline:none;
@@ -55,7 +56,7 @@ button{
     border: none;
     background-color: #f4f4f4;
 }
-.add_tarefa button{
+button{
     background-color: #6c63ff;
     color: black;
     font-weight: bold;
@@ -63,13 +64,13 @@ button{
     box-shadow: 0px 0px 10px  #33333362;
     flex-grow: 1;
 }
-.add_tarefa button:hover{
+button:hover{
     transition: 0.7s;
     background-color: #524bd9;
 }
-.add_tarefa button:active{
+button:active{
     background-color: #6c63ff;
-    padding: 7px 8px;
+    width: 99%;
     transition: 0s;
 }
 main .tarefas{
