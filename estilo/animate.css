@@ -28,15 +28,18 @@ Campos de input animados aqui
     top: -9px;
     font-size: 13.1px;
     font-weight: bold;
-    transition: .4s ease all;
+    transition: .3s ease all;
 }
 
 /*
 Elementos criados em animate.js estilizados aqui
-
+*/
 .focus{
-    opacity: 0.5;
-}*/
+    opacity: 0.5; /* Aplica desfoque */
+    pointer-events: none;/* Bloqueia interações (cliques, rolagem, etc.) */
+    user-select: none;/* Impede seleção de texto */
+    transition: .4s ease all;
+}
 .hidden{
     display: none;
 }
@@ -50,6 +53,7 @@ Elementos criados em animate.js estilizados aqui
     border-radius: 10px;
     border: 2px solid #ff6363;
     box-shadow: 0px 0px 10px  #33333342;
+    transition: .4s ease all;
 }
 #conteudo{
     display: flex;
@@ -59,4 +63,26 @@ Elementos criados em animate.js estilizados aqui
 #conteudo div button{
     margin-top: 30px;
     background-color: #ff6363;
+}
+/*ìcone de carregamento*/
+#carregamento{
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    width: 100%;
+    display: flex;
+}
+#carregamento span{
+    width: 40px;
+    height: 40px;
+    border: 6px solid #ffffff;
+    border-top: 6px solid #3498bd;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: auto;
+    box-shadow:  0px 0px 10px #2e2e2ed0,0px 0px 5px #2e2e2ed0 inset;
+}
+@keyframes spin{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
 }

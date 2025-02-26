@@ -2,7 +2,7 @@ import caixa_dialogo from "./animate.js";
 
 const num_td = 6;
 
-function add_tarefa(event){
+const add_tarefa = (event)=>{
     event.preventDefault(); // Evita o recarregamento da página
     
     //cAMPOS DE IMPUT
@@ -15,6 +15,13 @@ function add_tarefa(event){
         let parametro = "Vasio"
         caixa_dialogo(parametro)
         return; // Sai da função se algum campo estiver vazio
+    }
+    if(tarefa.trim() != "" || prioridade.trim() != "" || descricao.trim()!=""){
+        const loading = document.getElementById("loading")
+        loading.classList.remove("hidden");
+        setTimeout(() =>{
+            loading.classList.add("hidden");
+        }, 1500)
     }
     //DATA ACTUAL - CRIAÇÃO DA TAREFA
     const data = new Date()

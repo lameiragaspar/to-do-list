@@ -15,59 +15,63 @@
         </h1>
     </header>
     <main>
-        <form action="" class="add_tarefa focus">
-            <div class="input_label">
-                <input type="text" name="tarefa" id="id_tarefa" required>
-                <label for="id_tarefa">Defina uma tarefa</label>
-                <select name="prioridade" id="id_prioridade" required>
-                    <option value="">Defina uma prioridade</option>
-                    <option value="Alta">Alta</option>
-                    <option value="Média">Média</option>
-                    <option value="Baixa">Baixa</option>
-                </select>
-            </div>
-            <div class="">
+        <div id="focus">
+            <form action="" class="add_tarefa">
                 <div class="input_label">
-                    <input type="text" name="descricao" id="id_descricao" required autocomplete="off">
-                    <label for="id_descricao">Descrição</label>
+                    <input type="text" name="tarefa" id="id_tarefa" required>
+                    <label for="id_tarefa">Defina uma tarefa</label>
+                    <select name="prioridade" id="id_prioridade" required>
+                        <option value="">Defina uma prioridade</option>
+                        <option value="Alta">Alta</option>
+                        <option value="Média">Média</option>
+                        <option value="Baixa">Baixa</option>
+                    </select>
                 </div>
-                <button id="add_tarefa" type="button" onclick="add_tarefa(event)">Adicionar tarefa</button>
-            </div>
-        </form>
-        <hr>
-        <section class="tarefas focus">
-            <table>
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th>Tarefa</th>
-                        <th>Prioridade</th>
-                        <th>Data</th>
-                        <th></th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody id="mostrar_tarefa">
-                    <!--As tarefas serão adicionadas via JS-->
-
-                    <tr><!--Cada nova tarefa será um tr (nova linha na tabela)-->
-
-                        <!--Cada linha terá 5 td (colunas) definidas abaixo -->
-
-                        <!--
-                        1 <td>Teste</td> referente ao nome da tarefa
-                        2 <td>Média</td> referente a prioridade da tarefa
-                            data
-                        3 <td>Editar</td> icone*
-                        4 <td>Deletar</td> icone*
-                        -->
-                    
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+                <div class="">
+                    <div class="input_label">
+                        <input type="text" name="descricao" id="id_descricao" required autocomplete="off">
+                        <label for="id_descricao">Descrição</label>
+                    </div>
+                    <button id="add_tarefa" type="button" >Adicionar tarefa</button>
+                </div>
+            </form>
+            <hr>
+            <section class="tarefas">
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Tarefa</th>
+                            <th>Prioridade</th>
+                            <th>Data</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="mostrar_tarefa">
+                        <!--As tarefas serão adicionadas via JS-->
+                        <tr><!--Cada nova tarefa será um tr (nova linha na tabela)-->
+                            <!--Cada linha terá 5 td (colunas) definidas abaixo -->
+                            <!--
+                            1 <td>Teste</td> referente ao nome da tarefa
+                            2 <td>Média</td> referente a prioridade da tarefa
+                                data
+                            3 <td>Editar</td> icone*
+                            4 <td>Deletar</td> icone*
+                            -->
+            
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+        <section id="carregamento" class="hidden">
+                <span id="loading" class="hidden">
+                    <!--Ícone de carregamento-->
+                </span>
+            </section>
         <!--Caixa de dialogo-->
-        <section id="caixaDdialogo" class="hidden">
+        <section id="caixaDdialogo" class="hidden caixa_dialogo">
             <div id="conteudo">
                 <div>
                     <div id="txt">
@@ -75,7 +79,6 @@
                     </div>
                     <button id="fechar_caixa" type="button">Ok</button>
                 </div>
-
             </div>
         </section>
     </main>
