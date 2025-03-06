@@ -1,17 +1,12 @@
 const tarefas = [
-    {nome: "Lavar"},
-    {nome: "Comer"},
-    {nome: "Dormir"}
+    {nome: "Lavar", prioeidade: 1},
+    {nome: "Lavar", prioeidade: 2},
+    {nome: "Dormir", prioeidade: 3}
 ]
 
-const add = "jantar"
-
-const existe = tarefas.some((tarefa) => tarefa.nome === add);//A função some retorna true se o nome da tarefa existir no array tarefas
-
-if(existe){
-    console.log("Existe")
-}else{
-    tarefas.push({nome: add})
+function PrioridadeAlta(NomeRemovido, PriRemovida){
+    let tarefa = tarefas.filter((tarefa) => !(tarefa.nome == NomeRemovido && tarefa.prioeidade == PriRemovida) )
+    console.log(tarefa)
 }
 
-console.log(tarefas)
+PrioridadeAlta("Lavar", 1)

@@ -35,7 +35,7 @@ const adicionarLinhaTabela = ({ tarefa, prioridade, data }) => {
     let delet = document.createElement("img");
     delet.setAttribute("src", "icon/delete.svg");
     delet.setAttribute("alt", "delete");
-    delet.addEventListener("click", () => removerTarefa(tarefa));
+    delet.addEventListener("click", () => removerTarefa(tarefa, prioridade));
 
     let nova_tarefa = document.createElement("tr");
 
@@ -82,6 +82,16 @@ const add_tarefa = (event) => {
         return;//Para a função se os inputs estiverem vasios
     }
 
+    let tarefas = carregarTarefas()
+
+    const NomeTarefaExiste = tarefas.some((nome) => nome.tarefa === tarefa)
+    const prioridadeTarefaExiste = tarefas.some((priorida) => priorida.prioridade === prioridade)
+
+    if(NomeTarefaExiste && prioridadeTarefaExiste){
+        caixa_dialogo("Existe")
+        return;
+    }
+
     carregamento();
     setTimeout(() => {
         let data = new Date();
@@ -100,9 +110,9 @@ const add_tarefa = (event) => {
 };
 
 // Função para remover uma tarefa do localStorage
-const removerTarefa = (tarefaRemovida) => {
+const removerTarefa = (tarefaRemovida, prioeidadeRemovida) => {
     let tarefas = carregarTarefas();
-    tarefas = tarefas.filter(({ tarefa}) => tarefa !== tarefaRemovida);
+    tarefas = tarefas.filter(({tarefa, prioridade}) => !(tarefa === tarefaRemovida && prioridade === prioeidadeRemovida));
     salvarTarefas(tarefas);
     exibirTarefas();
 };

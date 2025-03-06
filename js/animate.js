@@ -1,10 +1,17 @@
 const caixa_dialogo = (dialogo) =>{
+    carregamento();
     if(dialogo == "Vazio"){ //ajude e usuário a preencher todos os dado
-        carregamento();
         setTimeout(() =>{
             mostrarCaixaDialogo(`<p>Preencha todos os dados!</p>`)//Chama a função mostrar conteúdo e o parámetro é a mensagem para o usuário
         }, 1000)
         return
+    }else if(dialogo == "Existe"){
+        setTimeout(() =>{
+            mostrarCaixaDialogo(
+                `<p>A tarefa que tentou adicionar já exite!</p>
+                <p>Verifique a sua lista de tarefas e tente novamente!</p>`
+            ) 
+        }, 1000)
     }
 }
 const focus = document.getElementById("focus");
