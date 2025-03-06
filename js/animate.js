@@ -1,10 +1,9 @@
 const caixa_dialogo = (dialogo) =>{
-    if(dialogo == "Vasio"){ //ajude e usuário a preencher todos os dado
+    if(dialogo == "Vazio"){ //ajude e usuário a preencher todos os dado
         carregamento();
         setTimeout(() =>{
             mostrarCaixaDialogo(`<p>Preencha todos os dados!</p>`)//Chama a função mostrar conteúdo e o parámetro é a mensagem para o usuário
-        }, 1500)
-    }else{
+        }, 1000)
         return
     }
 }
@@ -17,7 +16,7 @@ function carregamento(){
     setTimeout(() =>{
         loading.classList.add("hidden");
         focus.classList.remove("focus")
-    }, 1500)
+    }, 1000)
 }
 
 const mostrarCaixaDialogo = (conteudo) =>{
