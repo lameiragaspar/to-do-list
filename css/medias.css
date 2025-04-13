@@ -1,0 +1,31 @@
+@media screen and (max-width: 600px) {
+    /* Ajustes para o formulário */
+    .add_tarefa div {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .add_tarefa input,
+    .add_tarefa select {
+        width: 100%;
+        padding: 12px; /* Aumentar o tamanho para melhorar a usabilidade em telas pequenas */
+    }
+
+    /* Ajustes para o layout da tabela */
+    .tarefas table {
+        display: block;
+        overflow-x: auto;
+    }
+    .tarefas table thead, .tarefas table tbody {
+        display: block;
+    }
+    .tarefas table td, .tarefas table th {
+        display: block;
+        width: 100%;
+    }
+
+    /* Ajustes para o modal */
+    #caixaDdialogo {
+        width: 90%;
+        top: 20%;
+    }
+}

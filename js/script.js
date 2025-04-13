@@ -1,4 +1,4 @@
-import { caixa_dialogo, carregamento } from "./animate.js";
+import { caixa_dialogo, carregamento, fecharDialogo} from "./animate.js";
 
 // Função para salvar tarefas no localStorage
 const salvarTarefas = (tarefas) => {
@@ -32,10 +32,14 @@ const adicionarLinhaTabela = ({ tarefa, prioridade, data }) => {
     edite.setAttribute("src", "icon/editar.svg");
     edite.setAttribute("alt", "editar");
 
-    let delet = document.createElement("img");
+    let delet = document.createElement("img"); //Ícone para deletar
     delet.setAttribute("src", "icon/delete.svg");
     delet.setAttribute("alt", "delete");
-    delet.addEventListener("click", () => removerTarefa(tarefa, prioridade));
+    delet.addEventListener("click", () => caixa_dialogo("Deletar"))
+
+    let botaoParaDeletar = document.getElementById("deletar")
+    botaoParaDeletar.addEventListener("click", () => removerTarefa(tarefa, prioridade));
+    //delet.addEventListener("click", () => removerTarefa(tarefa, prioridade));
 
     let nova_tarefa = document.createElement("tr");
 
@@ -113,12 +117,12 @@ const add_tarefa = (event) => {
 const removerTarefa = (tarefaRemovida, prioeidadeRemovida) => {
     let tarefas = carregarTarefas();
     tarefas = tarefas.filter(({tarefa, prioridade}) => !(tarefa === tarefaRemovida && prioridade === prioeidadeRemovida));
+    fecharDialogo();
     salvarTarefas(tarefas);
     exibirTarefas();
 };
 
 // Adicionando evento ao botão de adicionar tarefa
 document.getElementById("add_tarefa").addEventListener("click", add_tarefa);
-
 // Carregar tarefas ao iniciar
 window.addEventListener("load", exibirTarefas);

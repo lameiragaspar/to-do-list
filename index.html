@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/estilo/style.css">
-    <link rel="stylesheet" href="/estilo/animate.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="css/medias.css">
     <title>Lista de tarefas</title>
 </head>
 <body>
@@ -77,7 +78,10 @@
                     <div id="txt">
                         <!--Todos os elementos adicionados via animate.js-->
                     </div>
-                    <button id="fechar_caixa" type="button">Ok</button>
+                    <div class="botoes">
+                        <button id="fechar_caixa" type="button">Ok</button>
+                        <button id="deletar" class="hidden">Deletar</button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -86,5 +90,4 @@
     <script type="module" src="js/script.js"></script>
     <script type="module" src="js/animate.js"></script>
 </body>
-
 </html>
